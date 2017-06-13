@@ -1,3 +1,7 @@
-.table-middle > tbody > tr > td, .table-middle > tbody > tr > th {
-     vertical-align: middle;
+.table-middle > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.table-middle > tbody > tr > th {
+    vertical-align: middle;
 }
