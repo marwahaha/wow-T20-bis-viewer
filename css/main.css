@@ -24,6 +24,10 @@
     border-top: 0;
 }
 
+label {
+    color: #78dcff;
+}
+
 .container {
     background-color: #162C44;
 }
