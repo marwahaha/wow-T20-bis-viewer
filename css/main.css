@@ -5,3 +5,29 @@
 .table-middle > tbody > tr > th {
     vertical-align: middle;
 }
+
+.table-striped > thead > tr > th {
+    background-color: #3480AF;
+    color: white;
+    border-bottom: 0;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #1D334C;
+    color: #78dcff;
+    border-top: 0;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td, .table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #233B55;
+    color: #78dcff;
+    border-top: 0;
+}
+
+.container {
+    background-color: #162C44;
+}
+
+body {
+    background: black;
+}
