@@ -29,9 +29,14 @@ label {
 }
 
 .container {
+    padding-top: 10px;
     background-color: #162C44;
 }
 
 body {
     background: black;
+}
+
+.toolbar {
+    float:left;
 }
