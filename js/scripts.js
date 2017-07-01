@@ -1,10 +1,27 @@
 $(document).ready(function () {
     $('#wow-bis-tos').DataTable({
+        data: bloodDkData,
         "paging": false,
         dom: 'l<"toolbar">frtip',
         initComplete: function () {
             $("div.toolbar").html('<div class="btn-group" data-toggle="buttons"> <label class="btn btn-primary toggleDifficulty active"> <input type="radio" name="options" id="3563" autocomplete="off" checked> Mythic Mode </label> <label class="btn btn-primary toggleDifficulty"> <input type="radio" name="options" id="3562" autocomplete="off"> Heroic Mode </label> </div>');
-        }
+        },
+        columns: [
+            { title: "#" },
+            { title: "Slot" },
+            { title: "Item" },
+            { title: "Boss." },
+            { title: "Base ilevel" },
+            { title: "Bonus" }
+        ],
+        columnDefs: [
+            {
+                'targets': 3,
+                'createdCell': function (td, cellData, rowData, row, col) {
+                    $(td).attr('align', 'center');
+                }
+            }
+        ]
     });
 
     $('.toggleDifficulty').on('change', function (e) {
