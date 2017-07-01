@@ -10,29 +10,106 @@ $(document).ready(function () {
             { title: "#" },
             { title: "Slot" },
             { title: "Item" },
-            { title: "Boss." },
+            { title: "Boss" },
             { title: "Base ilevel" },
             { title: "Bonus" }
         ],
         columnDefs: [
             {
+                'targets': 0,
+                'cellType': 'th',
+                'data': 'number',
+                'createdCell': function (th, cellData, rowData, row, col) {
+                    $(th).attr('scope', 'row');
+                }
+            },
+            {
+                'targets': 1,
+                'data': 'item_slot'
+            },
+            {
+                'targets': 2,
+                'render': function (data, type, full, meta) {
+                    // Render wowhead tooltip with item_id and bonuses
+                    return '<a href="https://ptr.wowhead.com/item=' + full.item_id + '" rel="bonus=' + full.rel + '" class="itemRef"/>';
+                }
+            },
+            {
                 'targets': 3,
-                'createdCell': function (td, cellData, rowData, row, col) {
-                    $(td).attr('align', 'center');
+                'render': function (data, type, full, meta) {
+                    // Render boss name and avatar
+                    return full.boss_id ? bossWithImg(full.boss_id) : 'N / A';
+                }
+            },
+            {
+                'targets': 4,
+                'data': 'item_level'
+            },
+            {
+                'targets': 5,
+                'render': function (data, type, full, meta) {
+                    // Render bonuses (Tier set, Legendary and Relics)
+                    return renderBonus(full.bonus);
                 }
             }
         ]
     });
 
+    /**
+     * update tooltip when switching difficulty
+     */
     $('.toggleDifficulty').on('change', function (e) {
         changeDifficulty(e.target.id);
     });
 
 });
 
+/**
+ * RegExp matching all difficulties ID
+ */
+var regexDifficultyId = new RegExp(Object.values(difficulty).reduce(function (a, b) {
+    return a + '|' + b;
+}), 'g');
+
+
+/**
+ * Update all items to selected difficulty
+ * 
+ * @param {number} bonusVal 
+ */
 var changeDifficulty = (bonusVal) => {
-    var wowTooltips = document.getElementsByClassName('q4');
+    var wowTooltips = document.getElementsByClassName('itemRef');
     Array.prototype.forEach.call(wowTooltips, e => {
-        e.setAttribute("rel", "bonus=" + bonusVal);
+        // Switching difficulty ID in "rel" attribute for all item cell
+        e.setAttribute("rel", e.getAttribute("rel").replace(regexDifficultyId, bonusVal));
     });
 };
+
+/**
+ * Generate html with boss name and avatar for view value
+ * 
+ * @param {number} id 
+ */
+var bossWithImg = (id) => {
+    var boss = bosses.find((e) => { return e.id === id; });
+    return '<img src="' + boss.img + '" alt="" class="content-image" /><br/>' + boss.name;
+}
+
+
+/**
+ * Render bonuses (Tier set, Legendary and Relics)
+ * 
+ * @param {*} value 
+ */
+var renderBonus = (value) => {
+    if (!value) {
+        return '';
+    }
+    if (value.match(/legendary/i)) {
+        return '<span class="q5 bold">Legendary</span>';
+    }
+    if (value.match(/T/i)) {
+        return '<span class="q4 bold">' + value + '</span>';
+    }
+    return '<a href="https://ptr.wowhead.com/spell=' + value + '"></a>';
+}

@@ -40,3 +40,7 @@ body {
 .toolbar {
     float:left;
 }
+
+.bold {
+    font-weight: bold;
+}
