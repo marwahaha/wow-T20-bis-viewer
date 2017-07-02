@@ -2,6 +2,7 @@ $(document).ready(function () {
     $('#wow-bis-tos').DataTable({
         data: bloodDkData,
         "paging": false,
+        "info": false,
         dom: 'l<"toolbar">frtip',
         initComplete: function () {
             $("div.toolbar").html(toolbarDifficultyButton);
@@ -82,7 +83,7 @@ var regexDifficultyId = new RegExp(Object.keys(difficulty).reduce(function (acc,
  * @param {number} bonusVal 
  */
 var changeDifficulty = (bonusVal) => {
-    var wowTooltips = document.getElementsByClassName('itemRef');
+    let wowTooltips = document.getElementsByClassName('itemRef');
     Array.prototype.forEach.call(wowTooltips, e => {
         // Switching difficulty ID in "rel" attribute for all item cell
         e.setAttribute("rel", e.getAttribute("rel").replace(regexDifficultyId, bonusVal));
@@ -95,7 +96,7 @@ var changeDifficulty = (bonusVal) => {
  * @param {number} id 
  */
 var bossWithImg = (id) => {
-    var boss = bosses.find((e) => { return e.id === id; });
+    let boss = bosses.find((e) => { return e.id === id; });
     return '<img src="' + boss.img + '" alt="" class="content-image" /><br/>' + boss.name;
 }
 
