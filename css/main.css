@@ -37,6 +37,7 @@ label > img {
 }
 
 .container {
+    display: table;
     padding-top: 10px;
     background-color: #162C44;
 }
