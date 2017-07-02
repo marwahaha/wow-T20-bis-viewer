@@ -57,15 +57,15 @@ var bosses = [
 
 var difficulty = {
     raidfinder: {
-        id: "3564", name: "Raid Finder"
+        id: "3564", name: "Raid Finder", img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_summerfest_brazierblue.jpg"
     },
     normal: {
-        id: "3561", name: "Normal Mode"
+        id: "3561", name: "Normal Mode", img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_summerfest_braziergreen.jpg"
     },
     heroic: {
-        id: "3562", name: "Heroic Mode"
+        id: "3562", name: "Heroic Mode", img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_summerfest_brazierorange.jpg"
     },
     mythic: {
-        id: "3563", name: "Mythic Mode"
+        id: "3563", name: "Mythic Mode", img: "https://wow.zamimg.com/images/wow/icons/large/inv_misc_summerfest_brazierred.jpg"
     }
 };

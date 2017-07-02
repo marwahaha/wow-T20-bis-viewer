@@ -28,6 +28,10 @@ label {
     color: #78dcff;
 }
 
+label > img {
+    inline-size: 30px;
+}
+
 .dataTables_info {
     color: #78dcff;
 }

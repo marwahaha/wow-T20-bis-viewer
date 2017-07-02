@@ -4,7 +4,7 @@ $(document).ready(function () {
         "paging": false,
         dom: 'l<"toolbar">frtip',
         initComplete: function () {
-            $("div.toolbar").html('<div class="btn-group" data-toggle="buttons"> <label class="btn btn-primary toggleDifficulty active"> <input type="radio" name="options" id="' + difficulty.mythic.id + '" autocomplete="off" checked>' + difficulty.mythic.name + '</label> <label class="btn btn-primary toggleDifficulty"> <input type="radio" name="options" id="' + difficulty.heroic.id + '" autocomplete="off">' + difficulty.heroic.name + '</label> <label class="btn btn-primary toggleDifficulty"> <input type="radio" name="options" id="' + difficulty.normal.id + '" autocomplete="off">' + difficulty.normal.name + '</label> <label class="btn btn-primary toggleDifficulty"> <input type="radio" name="options" id="' + difficulty.raidfinder.id + '" autocomplete="off">' + difficulty.raidfinder.name + '</label></div>');
+            $("div.toolbar").html(toolbarDifficultyButton);
         },
         columns: [
             { title: "#" },
@@ -61,7 +61,7 @@ $(document).ready(function () {
     $('.toggleDifficulty').on('change', function (e) {
         changeDifficulty(e.target.id);
     });
-    
+
 });
 
 /**
@@ -117,3 +117,28 @@ var renderBonus = (value) => {
     }
     return '<a href="https://www.wowhead.com/spell=' + value + '"></a>';
 }
+
+/**
+ * Create a difficulty button (with icon)
+ * 
+ * @param {object} difficulty 
+ */
+var difficultyButton = (difficulty) => {
+    return '<label class="btn btn-primary toggleDifficulty">' +
+        '<input type="radio" name="options" id="' + difficulty.id + '" autocomplete="off" checked>' +
+        '<img src="' + difficulty.img + '" alt="" class="img-circle" />' +
+        '<span class="hidden-xs"> ' + difficulty.name + '</span>' +
+        '</label>';
+};
+
+/**
+ * Concat all difficulty buttons
+ */
+var allDifficultyButton = Object.keys(difficulty).reduce(function (acc, current, index, array) {
+    return acc + difficultyButton(difficulty[current]);
+}, '');
+
+/**
+ * Btn-group + all buttons => table toolbar
+ */
+var toolbarDifficultyButton = '<div class="btn-group" data-toggle="buttons">' + allDifficultyButton + '</div>';
