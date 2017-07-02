@@ -28,6 +28,10 @@ label {
     color: #78dcff;
 }
 
+.dataTables_info {
+    color: #78dcff;
+}
+
 .container {
     padding-top: 10px;
     background-color: #162C44;

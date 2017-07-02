@@ -56,8 +56,16 @@ var bosses = [
 
 
 var difficulty = {
-    raidfinder: "3564",
-    normal: "3561",
-    heroic: "3562",
-    mythic: "3563"
+    raidfinder: {
+        id: "3564", name: "Raid Finder"
+    },
+    normal: {
+        id: "3561", name: "Normal Mode"
+    },
+    heroic: {
+        id: "3562", name: "Heroic Mode"
+    },
+    mythic: {
+        id: "3563", name: "Mythic Mode"
+    }
 };
