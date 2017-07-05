@@ -39,7 +39,11 @@ $(document).ready(function () {
                 'targets': 3,
                 'render': function (data, type, full, meta) {
                     // Render boss name and avatar
-                    return full.boss_id ? bossWithImg(full.boss_id) : 'N / A';
+                    if (type === 'sort') {
+                        // Sorting by ID (which is the right order)
+                        return full.boss_id;
+                    }
+                    return  full.boss_id ? bossWithImg(full.boss_id) : 'N / A';
                 }
             },
             {
