@@ -11,8 +11,8 @@ $(document).ready(function () {
             { title: "#" },
             { title: "Slot" },
             { title: "Item" },
-            { title: "Boss" },
-            { title: "Base ilevel" },
+            { title: "Boss", className: "dt-center" },
+            { title: "Base ilevel", className: "dt-center" },
             { title: "Bonus" }
         ],
         columnDefs: [
@@ -43,7 +43,7 @@ $(document).ready(function () {
                         // Sorting by ID (which is the right order)
                         return full.boss_id;
                     }
-                    return  full.boss_id ? bossWithImg(full.boss_id) : 'N / A';
+                    return full.boss_id ? bossWithImg(full.boss_id) : 'N / A';
                 }
             },
             {
