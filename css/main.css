@@ -6,6 +6,10 @@
     vertical-align: middle;
 }
 
+.table-responsive {
+    border: none;
+}
+
 .table-striped > thead > tr > th {
     background-color: #3480AF;
     color: white;
@@ -71,6 +75,20 @@ td.dt-center {
     width: 650px;
     background-color: #284A68;
 }
+
+.navbar-default .navbar-toggle {
+    color: #78dcff;
+    border-color: #78dcff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #284A68;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #78dcff;
+}
+
 
 .navbar-header > img {
     inline-size: 50px;
