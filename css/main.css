@@ -1,8 +1,4 @@
-.table-middle > tbody > tr > td {
-    vertical-align: middle;
-}
-
-.table-middle > tbody > tr > th {
+.table-middle > tbody > tr > td, .table-middle > tbody > tr > th {
     vertical-align: middle;
 }
 
@@ -39,7 +35,7 @@
 }
 
 .table-condensed > tbody > tr > td > .disabled {
-    color: #8a78ff !important;
+    color: #8a78ff;
 }
 
 
@@ -68,6 +64,18 @@ td.dt-center {
     color: white;
     background-color: #284A68;
     background-image: none;
+}
+
+.navbar-default .navbar-text {
+    color: #78dcff;
+}
+
+.navbar-default .navbar-link {
+    color: #78dcff;
+}
+
+.navbar-default .navbar-link:hover, .navbar-default .navbar-link:focus {
+    color: white;
 }
 
 .dropdown-menu {
