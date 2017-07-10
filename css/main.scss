@@ -1,0 +1,156 @@
+// Color template
+$color0: black;
+$color1: white;
+$color2: #1D334C;
+$color3: #78dcff;
+$color4: #233B55;
+$color5: #8a78ff;
+$color6: #1D364F;
+$color7: #284A68;
+$color8: #162C44;
+$color9: #3480AF;
+// CSS properties (Scss syntax)
+.table-middle tbody tr td,
+.table-middle tbody tr th {
+    vertical-align: middle;
+}
+
+.table-striped {
+    thead>tr>th {
+        background-color: $color9;
+        color: $color1;
+        border-bottom: 0;
+    }
+    tbody {
+        tr:nth-child(odd) td,
+        tr:nth-child(odd) th {
+            background-color: $color2;
+            color: $color3;
+            border-top: 0;
+        }
+        tr:nth-child(even) td,
+        tr:nth-child(even) th {
+            background-color: $color4;
+            color: $color3;
+            border-top: 0;
+        }
+    }
+}
+
+td.dt-center {
+    text-align: center;
+}
+
+.navbar-default {
+    background-image: linear-gradient(to bottom, $color0 0, $color6 100%);
+    border-color: #2f465d;
+    .navbar-nav {
+        li a {
+            color: $color3;
+            &:focus,
+            &:hover {
+                color: $color1;
+            }
+        }
+        .open a,
+        .open a:focus,
+        .open a:hover {
+            color: $color1;
+            background-color: $color7;
+            background-image: none;
+        }
+    }
+    .btn-link:focus,
+    .btn-link:hover {
+        color: $color1;
+    }
+    .navbar-text {
+        color: $color3;
+    }
+    .navbar-link {
+        color: $color3;
+        &:focus,
+        &:hover {
+            color: $color1;
+        }
+    }
+    .navbar-toggle {
+        color: $color3;
+        border-color: $color3;
+        &:focus,
+        &:hover {
+            background-color: $color7;
+        }
+        .icon-bar {
+            background-color: $color3;
+        }
+    }
+    .navbar-header>img {
+        inline-size: 50px;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    width: 650px;
+    background-color: $color7;
+    .table-condensed {
+        tbody tr {
+            th {
+                padding-left: 10px;
+                border-top: 0;
+            }
+            td {
+                padding-left: 10px;
+                border-top: 0;
+                .btn {
+                    padding: 0px 0px 0px 12px;
+                    color: $color3;
+                }
+                .disabled {
+                    color: $color5;
+                }
+            }
+        }
+    }
+}
+
+label {
+    color: $color3;
+    img {
+        inline-size: 30px;
+    }
+}
+
+.dataTables_info {
+    color: $color3;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    padding-top: 10px;
+    background-color: $color8;
+    .table-responsive {
+        border: none;
+    }
+}
+
+body {
+    padding-top: 50px;
+    background: $color0;
+}
+
+.toolbar {
+    float: left;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
