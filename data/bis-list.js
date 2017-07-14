@@ -1,5 +1,5 @@
 /**
- * Current template for listing Best in Slot
+ * Current template for listing Best in Slot (example right below)
  * 
  * number: row number
  * item_slot: where the item goes (ie. head, chest, ...)
@@ -28,6 +28,15 @@ var templateData = [
         boss_id: "2",
         item_level: "930",
         bonus: "T20"
+    },
+    {
+        number: "2",
+        item_slot: "Neck",
+        item_id: "147013",
+        rel: "3563",
+        boss_id: "2",
+        item_level: "930",
+        bonus: ""
     }
 ];
 
