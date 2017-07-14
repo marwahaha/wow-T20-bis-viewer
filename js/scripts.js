@@ -149,6 +149,8 @@ var allDifficultyButton = Object.keys(difficulty).reduce(function (acc, current,
 var toolbarDifficultyButton = '<div class="btn-group" data-toggle="buttons">' + allDifficultyButton + '</div>';
 
 var switchData = (data) => {
+    $('.navbar-collapse.in').collapse('hide');
+
     $('#wow-bis-tos').dataTable().fnClearTable();
     $('#wow-bis-tos').dataTable().fnAddData(data);
     // Calling wowhead script
