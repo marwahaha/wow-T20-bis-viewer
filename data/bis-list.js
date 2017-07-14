@@ -207,3 +207,160 @@ var bloodDkData = [
         bonus: "238042"
     }
 ];
+
+
+var holyPaladinData = [
+{
+        number: "1",
+        item_slot: "Head",
+        item_id: "147160",
+        rel: "3563",
+        boss_id: "2",
+        item_level: "930",
+        bonus: "T20"
+    },
+    {
+        number: "2",
+        item_slot: "Neck",
+        item_id: "147014",
+        rel: "3563",
+        boss_id: "6",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "3",
+        item_slot: "Shoulder",
+        item_id: "147162",
+        rel: "3563",
+        boss_id: "8",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "4",
+        item_slot: "Back",
+        item_id: "142170",
+        rel: "1726",
+        boss_id: "",
+        item_level: "845+",
+        bonus: ""
+    },
+    {
+        number: "5",
+        item_slot: "Chest",
+        item_id: "147067",
+        rel: "3563",
+        boss_id: "3",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "6",
+        item_slot: "Wrist",
+        item_id: "147073",
+        rel: "3563",
+        boss_id: "2",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "7",
+        item_slot: "Hands",
+        item_id: "147123",
+        rel: "3563",
+        boss_id: "3",
+        item_level: "930",
+        bonus: "T20"
+    },
+    {
+        number: "8",
+        item_slot: "Waist",
+        item_id: "147072",
+        rel: "3563",
+        boss_id: "9",
+        item_level: "940",
+        bonus: ""
+    },
+    {
+        number: "9",
+        item_slot: "Legs",
+        item_id: "147161",
+        rel: "3563",
+        boss_id: "5",
+        item_level: "930",
+        bonus: "T20"
+    },
+    {
+        number: "10",
+        item_slot: "Feet",
+        item_id: "147060",
+        rel: "3563",
+        boss_id: "7",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "11",
+        item_slot: "Finger 1",
+        item_id: "137046",
+        rel: "3570",
+        boss_id: "",
+        item_level: "970",
+        bonus: "Legendary"
+    },
+    {
+        number: "12",
+        item_slot: "Finger 2",
+        item_id: "151644",
+        rel: "3570",
+        boss_id: "",
+        item_level: "970",
+        bonus: "Legendary"
+    },
+    {
+        number: "13",
+        item_slot: "Trinket 1",
+        item_id: "147007",
+        rel: "3563",
+        boss_id: "9",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "14",
+        item_slot: "Trinket 2",
+        item_id: "147004",
+        rel: "3563",
+        boss_id: "5",
+        item_level: "930",
+        bonus: ""
+    },
+    {
+        number: "15",
+        item_slot: "Life Relic",
+        item_id: "147104",
+        rel: "3563",
+        boss_id: "1",
+        item_level: "930",
+        bonus: "200294"
+    },
+    {
+        number: "16",
+        item_slot: "Holy Relic",
+        item_id: "147096",
+        rel: "3563",
+        boss_id: "2",
+        item_level: "930",
+        bonus: "200315"
+    },
+    {
+        number: "17",
+        item_slot: "Holy Relic",
+        item_id: "147096",
+        rel: "3563",
+        boss_id: "2",
+        item_level: "940",
+        bonus: "200315"
+    }
+];

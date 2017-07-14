@@ -32,7 +32,7 @@ $(document).ready(function () {
                 'targets': 2,
                 'render': function (data, type, full, meta) {
                     // Render wowhead tooltip with item_id and bonuses
-                    return '<a href="https://www.wowhead.com/item=' + full.item_id + '" rel="bonus=' + full.rel + '" class="itemRef"/>';
+                    return '<a href="https://ptr.wowhead.com/item=' + full.item_id + '" rel="bonus=' + full.rel + '" class="itemRef"/>';
                 }
             },
             {
@@ -120,7 +120,7 @@ var renderBonus = (value) => {
     if (value.match(/T/i)) {
         return '<span class="q4 bold">' + value + '</span>';
     }
-    return '<a href="https://www.wowhead.com/spell=' + value + '"></a>';
+    return '<a href="https://ptr.wowhead.com/spell=' + value + '"></a>';
 }
 
 /**
@@ -147,3 +147,10 @@ var allDifficultyButton = Object.keys(difficulty).reduce(function (acc, current,
  * Btn-group + all buttons => table toolbar
  */
 var toolbarDifficultyButton = '<div class="btn-group" data-toggle="buttons">' + allDifficultyButton + '</div>';
+
+var switchData = (data) => {
+    $('#wow-bis-tos').dataTable().fnClearTable();
+    $('#wow-bis-tos').dataTable().fnAddData(data);
+    // Calling wowhead script
+    $WowheadPower.init();
+}
