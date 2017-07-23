@@ -9,6 +9,7 @@ $color6: #1D364F;
 $color7: #284A68;
 $color8: #162C44;
 $color9: #3480AF;
+$color10: #2f465d;
 // CSS properties (Scss syntax)
 .table-middle tbody tr td,
 .table-middle tbody tr th {
@@ -43,7 +44,7 @@ td.dt-center {
 
 .navbar-default {
     background-image: linear-gradient(to bottom, $color0 0, $color6 100%);
-    border-color: #2f465d;
+    border-color: $color10;
     .navbar-nav {
         li a {
             color: $color3;
