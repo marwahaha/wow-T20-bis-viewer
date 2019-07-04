@@ -1,5 +1,17 @@
-# brack0.github.io
-Website hosted by Github
+# World of Warcraft Tier 20 Best in Slot viewer
+
+_Outdated and Abandonned Project._
+Website hosted by Github [link](brack0.github.io/wow-T20-bis-viewer/).
+
+Aside from the obvious goal for the users, I created this project to practice the basics of Web development.
+Here are the things I use to do so :
+- HTML
+- SASS
+- JS (ES5 or so)
+- JQuery :disappointed:
+- Bootstrap
+- Datatable
+- Wowhead lib (Fansite)
 
 ## Sass watcher
 
