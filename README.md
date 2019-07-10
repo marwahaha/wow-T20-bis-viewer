@@ -1,6 +1,6 @@
 # World of Warcraft Tier 20 Best in Slot viewer
 
-_Outdated and Abandonned Project._
+_Outdated and Abandoned Project._
 Website hosted by Github [link](brack0.github.io/wow-T20-bis-viewer/).
 
 Aside from the obvious goal for the users, I created this project to practice the basics of Web development.
